@@ -1,4 +1,3 @@
-import React from "react";
 import cardsData from "../../assets/cards.json";
 
 

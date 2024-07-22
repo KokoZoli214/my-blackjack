@@ -25,7 +25,7 @@ export default function GamePage() {
     SelectCardFunction(),
     SelectCardFunction(),
   ]);
-  const maxPlayerCards = 5;
+  // const maxPlayerCards = 5;
 
   const calculateHandValue = (cards) => {
     let totalValue = cards.reduce((total, card) => total + card.value, 0);
@@ -210,21 +210,21 @@ export default function GamePage() {
               <button
                 className="nextcard-btn"
                 onClick={bet}
-                disabled={roundEnded || playerCash == 0 || aiCash == 0 } >
+                disabled={roundEnded || playerCash === 0 || aiCash === 0 } >
                 Bet
               </button>
 
               <button
                 className="nextcard-btn"
                 onClick={double}
-                disabled={roundEnded || playerCash == 0 || aiCash == 0 || potValue == 0 || potValue > playerCash || potValue > aiCash} >
+                disabled={roundEnded || playerCash === 0 || aiCash === 0 || potValue === 0 || potValue > playerCash || potValue > aiCash} >
                 Double
               </button>
 
               <button
                 className="nextcard-btn"
                 onClick={allIn}
-                disabled={roundEnded || playerCash == 0 || aiCash == 0 } >
+                disabled={roundEnded || playerCash == 0 || aiCash === 0 } >
                 All in
               </button>
 
