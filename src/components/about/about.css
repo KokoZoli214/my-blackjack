@@ -1,0 +1,33 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.about-content {
+    backdrop-filter: blur(12px);
+
+    border: 2px solid rgb(8, 150, 8);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 15px rgb(8, 150, 8);
+
+    color: white;
+    font-weight: 400;
+    font-size: x-large;
+    text-shadow: 2px 2px 4px rgb(8, 150, 8);
+
+    padding: 2rem;
+
+    width: 1200px;
+
+    line-height: 2rem;
+    word-spacing: 5px;
+}
+
+.about-container .about-content h1 {
+    text-align: center;
+    margin: 2.5rem;
+}

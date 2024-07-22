@@ -1,0 +1,31 @@
+.enter-button {
+  padding: 1.5rem 3.5rem;
+  border: 3px solid rgb(8, 150, 8);
+  border-radius: 1.5rem;
+  color: rgb(8, 150, 8);
+  font-size: larger;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  background-color: rgb(137, 255, 137);
+}
+
+button:disabled {
+  background-color: rgb(204, 204, 204);
+  cursor: not-allowed;
+  /* box-shadow: 2px 2px 10px gray; */
+}
+
+.enter-button:hover {
+  color: white;
+  box-shadow: 4px 4px 15px rgb(8, 150, 8);
+}
+
+.check-text {
+  color: black;
+  font-weight: 500;
+  font-size: large;
+  text-shadow: 2px 2px 4px rgb(8, 150, 8);
+
+  cursor: pointer;
+}

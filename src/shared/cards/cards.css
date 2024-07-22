@@ -1,0 +1,56 @@
+.card-button {
+  /* background-image: url(../img/french.jpg); */
+  /* background: none; */
+  background-color: white;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  /* cursor: pointer; */
+
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid rgb(8, 150, 8);
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px rgb(8, 150, 8);
+
+  backdrop-filter: blur(10px);
+
+  width: 120px;
+  height: 180px;
+
+  padding: 1rem;
+}
+
+.card-button:hover {
+  box-shadow: 4px 4px 15px rgb(8, 150, 8);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card header h2 {
+  margin: .5rem;
+}
+
+.card p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.signal {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.symbols {
+  font-size: xx-large;
+}

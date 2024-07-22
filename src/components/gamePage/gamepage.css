@@ -1,0 +1,184 @@
+html {
+  background-image: url(../../shared/img/background.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.blackjack-game-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.left-side-down {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ai-area,
+.player-area {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  backdrop-filter: blur(10px);
+
+  border: 2px solid rgb(8, 150, 8);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 15px rgb(8, 150, 8);
+}
+
+.nextcard-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pot-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  font-size: large;
+  font-weight: 400;
+
+  backdrop-filter: blur(10px);
+
+  border: 2px solid rgb(8, 150, 8);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 15px rgb(8, 150, 8);
+
+  width: 15rem;
+
+  margin-right: 1rem;
+}
+
+.pot-area p{
+  padding: 1rem;
+  margin: 1rem;
+
+  border: 2px solid rgb(8, 150, 8);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 15px rgb(8, 150, 8);
+
+  backdrop-filter: blur(10px);
+  
+}
+
+.ai-cash {
+  display: flex;
+  text-align: center;
+}
+
+.player-cash {
+  display: flex;
+  text-align: center;
+}
+
+.pot-cash {
+  display: flex;
+  text-align: center;
+}
+
+.display {
+  border: 2px solid rgb(8, 150, 8);
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 15px rgb(8, 150, 8);
+
+  text-align: center;
+
+  color: white;
+  font-weight: 400;
+  font-size: large;
+
+  height: 20vh;
+  width: 40vh;
+
+  margin: 1rem;
+}
+
+.display > div > p {
+  font-size: x-large;
+}
+
+.display > div > span {
+  font-size: xx-large;
+}
+
+.upper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.btn {
+  margin: 1rem;
+}
+
+.nextcard-btn {
+  padding: 1rem 3rem;
+  display: inline-block;
+
+  background-color: rgb(250, 93, 101);
+  color: white;
+
+  border: 3px solid white;
+  border-radius: 1.5rem;
+
+  font-size: larger;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+
+  cursor: pointer;
+}
+
+.nextcard-btn:hover {
+  color: white;
+  box-shadow: 4px 4px 15px rgb(250, 93, 101);
+}
+
+.nextcard-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.game-text {
+  font-size: large;
+  color: white;
+}

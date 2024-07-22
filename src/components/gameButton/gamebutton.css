@@ -1,0 +1,16 @@
+.game-button {
+  padding: 1rem 3rem;
+  border: 3px solid white;
+  border-radius: 1.5rem;
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  background-color: rgb(250, 93, 101);
+}
+
+.game-button:hover {
+  color: white;
+  box-shadow: 4px 4px 15px rgb(250, 93, 101);
+}

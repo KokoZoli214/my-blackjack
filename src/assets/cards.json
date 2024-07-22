@@ -1,0 +1,314 @@
+[
+    {
+        "card": "Two",
+        "signal": "2",
+        "value": 2,
+        "symbols": "♥"
+    },
+    {
+        "card": "Three",
+        "signal": "3",
+        "value": 3,
+        "symbols": "♥"
+    },
+    {
+        "card": "Four",
+        "signal": "4",
+        "value": 4,
+        "symbols": "♥"
+    },
+    {
+        "card": "Five",
+        "signal": "5",
+        "value": 5,
+        "symbols": "♥"
+    },
+    {
+        "card": "Six",
+        "signal": "6",
+        "value": 6,
+        "symbols": "♥"
+    },
+    {
+        "card": "Seven",
+        "signal": "7",
+        "value": 7,
+        "symbols": "♥"
+    },
+    {
+        "card": "Eight",
+        "signal": "8",
+        "value": 8,
+        "symbols": "♥"
+    },
+    {
+        "card": "Nine",
+        "signal": "9",
+        "value": 9,
+        "symbols": "♥"
+    },
+    {
+        "card": "Ten",
+        "signal": "10",
+        "value": 10,
+        "symbols": "♥"
+    },
+    {
+        "card": "Jumbo",
+        "signal": "J",
+        "value": 10,
+        "symbols": "♥"
+    },
+    {
+        "card": "Queen",
+        "signal": "Q",
+        "value": 10,
+        "symbols": "♥"
+    },
+    {
+        "card": "King",
+        "signal": "K",
+        "value": 10,
+        "symbols": "♥"
+    },
+    {
+        "card": "Ace",
+        "signal": "A",
+        "value": 1,
+        "symbols": "♥"
+    },
+    {
+        "card": "Two",
+        "signal": "2",
+        "value": 2,
+        "symbols": "♦"
+    },
+    {
+        "card": "Three",
+        "signal": "3",
+        "value": 3,
+        "symbols": "♦"
+    },
+    {
+        "card": "Four",
+        "signal": "4",
+        "value": 4,
+        "symbols": "♦"
+    },
+    {
+        "card": "Five",
+        "signal": "5",
+        "value": 5,
+        "symbols": "♦"
+    },
+    {
+        "card": "Six",
+        "signal": "6",
+        "value": 6,
+        "symbols": "♦"
+    },
+    {
+        "card": "Seven",
+        "signal": "7",
+        "value": 7,
+        "symbols": "♦"
+    },
+    {
+        "card": "Eight",
+        "signal": "8",
+        "value": 8,
+        "symbols": "♦"
+    },
+    {
+        "card": "Nine",
+        "signal": "9",
+        "value": 9,
+        "symbols": "♦"
+    },
+    {
+        "card": "Ten",
+        "signal": "10",
+        "value": 10,
+        "symbols": "♦"
+    },
+    {
+        "card": "Jumbo",
+        "signal": "J",
+        "value": 10,
+        "symbols": "♦"
+    },
+    {
+        "card": "Queen",
+        "signal": "Q",
+        "value": 10,
+        "symbols": "♦"
+    },
+    {
+        "card": "King",
+        "signal": "K",
+        "value": 10,
+        "symbols": "♦"
+    },
+    {
+        "card": "Ace",
+        "signal": "A",
+        "value": 1,
+        "symbols": "♦"
+    },
+    {
+        "card": "Two",
+        "signal": "2",
+        "value": 2,
+        "symbols": "♠"
+    },
+    {
+        "card": "Three",
+        "signal": "3",
+        "value": 3,
+        "symbols": "♠"
+    },
+    {
+        "card": "Four",
+        "signal": "4",
+        "value": 4,
+        "symbols": "♠"
+    },
+    {
+        "card": "Five",
+        "signal": "5",
+        "value": 5,
+        "symbols": "♠"
+    },
+    {
+        "card": "Six",
+        "signal": "6",
+        "value": 6,
+        "symbols": "♠"
+    },
+    {
+        "card": "Seven",
+        "signal": "7",
+        "value": 7,
+        "symbols": "♠"
+    },
+    {
+        "card": "Eight",
+        "signal": "8",
+        "value": 8,
+        "symbols": "♠"
+    },
+    {
+        "card": "Nine",
+        "signal": "9",
+        "value": 9,
+        "symbols": "♠"
+    },
+    {
+        "card": "Ten",
+        "signal": "10",
+        "value": 10,
+        "symbols": "♠"
+    },
+    {
+        "card": "Jumbo",
+        "signal": "J",
+        "value": 10,
+        "symbols": "♠"
+    },
+    {
+        "card": "Queen",
+        "signal": "Q",
+        "value": 10,
+        "symbols": "♠"
+    },
+    {
+        "card": "King",
+        "signal": "K",
+        "value": 10,
+        "symbols": "♠"
+    },
+    {
+        "card": "Ace",
+        "signal": "A",
+        "value": 1,
+        "symbols": "♠"
+    },
+    {
+        "card": "Two",
+        "signal": "2",
+        "value": 2,
+        "symbols": "♣"
+    },
+    {
+        "card": "Three",
+        "signal": "3",
+        "value": 3,
+        "symbols": "♣"
+    },
+    {
+        "card": "Four",
+        "signal": "4",
+        "value": 4,
+        "symbols": "♣"
+    },
+    {
+        "card": "Five",
+        "signal": "5",
+        "value": 5,
+        "symbols": "♣"
+    },
+    {
+        "card": "Six",
+        "signal": "6",
+        "value": 6,
+        "symbols": "♣"
+    },
+    {
+        "card": "Seven",
+        "signal": "7",
+        "value": 7,
+        "symbols": "♣"
+    },
+    {
+        "card": "Eight",
+        "signal": "8",
+        "value": 8,
+        "symbols": "♣"
+    },
+    {
+        "card": "Nine",
+        "signal": "9",
+        "value": 9,
+        "symbols": "♣"
+    },
+    {
+        "card": "Ten",
+        "signal": "10",
+        "value": 10,
+        "symbols": "♣"
+    },
+    {
+        "card": "Jumbo",
+        "signal": "J",
+        "value": 10,
+        "symbols": "♣"
+    },
+    {
+        "card": "Queen",
+        "signal": "Q",
+        "value": 10,
+        "symbols": "♣"
+    },
+    {
+        "card": "King",
+        "signal": "K",
+        "value": 10,
+        "symbols": "♣"
+    },
+    {
+        "card": "Ace",
+        "signal": "A",
+        "value": 1,
+        "symbols": "♣"
+    }
+]
