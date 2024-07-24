@@ -243,7 +243,7 @@ export default function GamePage() {
                 <p>Eredmény:</p>
               </div>
 
-              <p>Ház vs Játékos</p>
+              <p>Ház vs Játékos </p>
 
               <div>
                 <span className="ai-score"> {aiScore} </span>

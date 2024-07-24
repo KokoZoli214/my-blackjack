@@ -1,5 +1,5 @@
-import React from "react";
-import { auth } from "../firebase";
+import React, { useState } from "react";
+import { auth } from "../../firebase";
 import "../register/register.css";
 
 export default function Register() {
@@ -7,6 +7,9 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
+
+console.log("auth test")
+  console.log(auth)
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -18,6 +21,7 @@ export default function Register() {
       const user = userCredential.user;
       await user.updateProfile({
         displayName: name,
+        photoURL: gender
       });
       alert("Registration successful!");
     } catch (error) {
@@ -41,7 +45,7 @@ export default function Register() {
         <header className="reg-header">Registration</header>
 
         <div className="datas">
-          <form>
+          <form className="form-container">
             <article className="inputs">
               <input
               type="email"
