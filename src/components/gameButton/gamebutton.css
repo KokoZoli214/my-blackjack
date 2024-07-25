@@ -14,3 +14,15 @@
   color: white;
   box-shadow: 4px 4px 15px rgb(250, 93, 101);
 }
+
+@media (max-width: 576px) {
+  .game-button {
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: .5rem;
+    width: 1rem;
+  }
+ }

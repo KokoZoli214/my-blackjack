@@ -21,8 +21,8 @@
 
   backdrop-filter: blur(10px);
 
-  width: 120px;
   height: 180px;
+  width: 120px;
 
   padding: 1rem;
 }

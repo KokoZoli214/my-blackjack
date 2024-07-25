@@ -12,7 +12,7 @@ export default function GamePage() {
   const [playerCash, setPlayerCash] = useState(10000);
   const [aiCash, setAiCash] = useState(1000000);
   const [potValue, setPotValue] = useState(0);
-  const [endGame, setEndGame] = useState(false);  //if somebody won or draw
+  const [endGame, setEndGame] = useState(false); //if somebody won or draw
   const [roundEnded, setRoundEnded] = useState(false); //buttons disabled due to round ended
   const [roundContinue, setRoundContinue] = useState(true);
 
@@ -29,7 +29,7 @@ export default function GamePage() {
 
   const calculateHandValue = (cards) => {
     let totalValue = cards.reduce((total, card) => total + card.value, 0);
-    let aceCount = cards.filter(card => card.card === "Ace").length;
+    let aceCount = cards.filter((card) => card.card === "Ace").length;
 
     while (aceCount > 0 && totalValue + 10 <= 21) {
       totalValue += 10;
@@ -38,21 +38,17 @@ export default function GamePage() {
 
     return totalValue;
   };
-  
 
   const totalCardValue = calculateHandValue(playerCards);
   const totalAiCardValue = calculateHandValue(aiCards);
 
-    useEffect( () => {
-      if (aiCash <= 0 && potValue <= 0 ) {
-        setGameResult("Gratulálok, Ön elnyerte az összes zsetont!");
-        
-  
-      } else if (playerCash <= 0 && potValue <= 0) {
-        setGameResult("Sajnos most nem volt szerencséd, a ház vitt mindent.");
-
-      }
-    }, [aiCash, playerCash, potValue] ) 
+  useEffect(() => {
+    if (aiCash <= 0 && potValue <= 0) {
+      setGameResult("Gratulálok, Ön elnyerte az összes zsetont!");
+    } else if (playerCash <= 0 && potValue <= 0) {
+      setGameResult("Sajnos most nem volt szerencséd, a ház vitt mindent.");
+    }
+  }, [aiCash, playerCash, potValue]);
 
   const drawCard = () => {
     if (!endGame && potValue > 0) {
@@ -76,36 +72,28 @@ export default function GamePage() {
   };
 
   const determineWinner = (playerValue, aiValue) => {
-
     if (playerValue > 21) {
       setAiScore(aiScore + 1);
       setGameResult("Az AI nyert!");
       setAiCash(aiCash + potValue);
-      
-
-    } 
-
-    else if (aiValue > 21 || playerValue > aiValue) {
+    } else if (aiValue > 21 || playerValue > aiValue) {
       setPlayerScore(playerScore + 1);
       setGameResult("Ön nyert!");
       setPlayerCash(playerCash + potValue);
-
     } else if (playerValue < aiValue) {
       setAiScore(aiScore + 1);
       setGameResult("Az AI nyert!");
       setAiCash(aiCash + potValue);
-    } 
-
-    else {
+    } else {
       setGameResult("Döntetlen");
       setPlayerCash(playerCash + potValue / 2);
       setAiCash(aiCash + potValue / 2);
     }
     setPotValue(0);
-   console.log("totalAiCardValue")
-   console.log(totalAiCardValue)
-   console.log("totalCardValue")
-   console.log(totalCardValue)
+    console.log("totalAiCardValue");
+    console.log(totalAiCardValue);
+    console.log("totalCardValue");
+    console.log(totalCardValue);
   };
 
   const bet = () => {
@@ -114,7 +102,7 @@ export default function GamePage() {
       setPotValue(potValue + 2 * betAmount);
       setPlayerCash(playerCash - betAmount);
       setAiCash(aiCash - betAmount);
-      setRoundContinue(false)
+      setRoundContinue(false);
     }
   };
 
@@ -124,7 +112,7 @@ export default function GamePage() {
       setPotValue(potValue + 2 * potValue);
       setPlayerCash(playerCash - betAmount);
       setAiCash(aiCash - betAmount);
-      setRoundContinue(false)
+      setRoundContinue(false);
     }
   };
 
@@ -134,11 +122,9 @@ export default function GamePage() {
       setPotValue(potValue + 2 * betAmount);
       setPlayerCash(playerCash - betAmount);
       setAiCash(aiCash - betAmount);
-      setRoundContinue(false)
+      setRoundContinue(false);
     }
   };
-
-
 
   const newGame = () => {
     setPlayerCards([SelectCardFunction(), SelectCardFunction()]);
@@ -147,131 +133,130 @@ export default function GamePage() {
     setRoundEnded(false);
     setGameResult("");
     setPotValue(0);
-    setRoundContinue(true)
-    if(aiCash <= 0 || playerCash <= 0){
-      setAiCash(1000000)
-      setPlayerCash(10000)
-      setAiScore(0)
-      setPlayerScore(0)
-   }
-  }
-
+    setRoundContinue(true);
+    if (aiCash <= 0 || playerCash <= 0) {
+      setAiCash(1000000);
+      setPlayerCash(10000);
+      setAiScore(0);
+      setPlayerScore(0);
+    }
+  };
 
   return (
-    <div>
-      <div className="blackjack-game-area">
-
+    <div className="blackjack-game-area">
       <div className="pot-area">
-            <div className="ai-cash">
-                <p>A ház zsetonja: {aiCash} </p>
-            </div>
-            <div className="pot-cash">
-                <p>A pot értéke: {potValue} </p>
-            </div>
-            <div className="player-cash">
-                <p>Játékos zsetonja: {playerCash} </p>
-            </div>
+        <div className="ai-cash">
+          <p>A ház zsetonja: {aiCash} </p>
+        </div>
+        <div className="pot-cash">
+          <p>A pot értéke: {potValue} </p>
+        </div>
+        <div className="player-cash">
+          <p>Játékos zsetonja: {playerCash} </p>
+        </div>
+      </div>
+
+      <div className="left-side">
+        <div className="ai-area">
+          <Cards card={aiCards[0]} />
+          {endGame && <Cards card={aiCards[1]} />}
+        </div>
+
+        <div className="left-side-down">
+          <div className="player-area">
+            {playerCards.map((card, index) => (
+              <Cards key={index} card={card} />
+            ))}
           </div>
 
-        <div className="left-side">
+          <div className="card-btn-container">
+            <button
+              className="card-btn"
+              onClick={drawCard}
+              disabled={endGame || roundEnded || roundContinue}
+            >
+              <span>Hit</span>
+            </button>
 
-          <div className="ai-area">
-            <Cards card={aiCards[0]} />
-            {endGame && <Cards card={aiCards[1]} />}
-          </div>
+            <button
+              className="card-btn"
+              onClick={endRound}
+              disabled={roundEnded || roundContinue}
+            >
+              <span>Stand</span>
+            </button>
 
-          <div className="left-side-down">
+            <button
+              className="card-btn"
+              onClick={bet}
+              disabled={roundEnded || playerCash === 0 || aiCash === 0}
+            >
+              <span>Bet</span>
+            </button>
 
-            <div className="player-area">
+            <button
+              className="card-btn"
+              onClick={double}
+              disabled={
+                roundEnded ||
+                playerCash === 0 ||
+                aiCash === 0 ||
+                potValue === 0 ||
+                potValue > playerCash ||
+                potValue > aiCash
+              }
+            >
+              <span>Double</span>
+            </button>
 
-              {playerCards.map((card, index) => (
-                <Cards key={index} card={card} />
-              ))}
-
-            </div>
-
-            <div className="nextcard-btn-container">
-
-              <button
-                className="nextcard-btn"
-                onClick={drawCard}
-                disabled={endGame || roundEnded || roundContinue}
-              >
-                Hit
-              </button>
-
-              <button 
-                className="nextcard-btn"
-                onClick={endRound}
-                disabled={roundEnded || roundContinue}>
-                Stand
-              </button>
-
-              <button
-                className="nextcard-btn"
-                onClick={bet}
-                disabled={roundEnded || playerCash === 0 || aiCash === 0 } >
-                Bet
-              </button>
-
-              <button
-                className="nextcard-btn"
-                onClick={double}
-                disabled={roundEnded || playerCash === 0 || aiCash === 0 || potValue === 0 || potValue > playerCash || potValue > aiCash} >
-                Double
-              </button>
-
-              <button
-                className="nextcard-btn"
-                onClick={allIn}
-                disabled={roundEnded || playerCash == 0 || aiCash === 0 } >
-                All in
-              </button>
-
-            </div>
-
+            <button
+              className="card-btn"
+              onClick={allIn}
+              disabled={roundEnded || playerCash == 0 || aiCash === 0}
+            >
+              <span>All in</span>
+            </button>
           </div>
         </div>
-       
-        <div className="right-side">
-          <div className="upper">
-            <div className="navbar">
-              <NavBar />
-            </div>
-            <div className="display">
-              <div>
-                <p>Eredmény:</p>
-              </div>
+      </div>
 
-              <p>Ház vs Játékos </p>
+      <div className="right-side">
+        <div className="upper">
+          <NavBar />
 
-              <div>
-                <span className="ai-score"> {aiScore} </span>
-                <span>:</span>
-                <span className="plyer-score"> {playerScore} </span>
-              </div>
-            </div>
-          </div>
           <div className="display">
             <div>
-              <p>A kártyáid jelenlegi értéke:</p>
+              <p>Eredmény:</p>
             </div>
-            <div>
-              <p>{totalCardValue}</p>
+
+            <p>Ház vs Játékos </p>
+
+            <div className="display-score">
+              <span className="ai-score"> {aiScore} </span>
+              <span>:</span>
+              <span className="plyer-score"> {playerScore} </span>
             </div>
           </div>
-          <div className="game-text">
-            <p>{gameResult}</p>
+        </div>
+        <div className="display">
+          <div>
+            <p>A kártyáid jelenlegi értéke:</p>
           </div>
-          <div className="btn">
-            <button
+          <div>
+            <p>{totalCardValue}</p>
+          </div>
+        </div>
+        <div className="game-text">
+          <p>{gameResult}</p>
+        </div>
+        <div className="btn">
+          <button
             className="game-button"
             onClick={newGame}
             disabled={potValue > 0 || !endGame}
-            >
-              New Game
-            </button>
-          </div>
+          >
+            <span>New Game</span>
+          </button>
         </div>
       </div>
     </div>

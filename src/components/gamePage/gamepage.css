@@ -1,3 +1,4 @@
+
 html {
   background-image: url(../../shared/img/background.png);
   background-repeat: no-repeat;
@@ -108,6 +109,7 @@ html {
 .player-cash {
   display: flex;
   text-align: center;
+  margin: 0;
 }
 
 .pot-cash {
@@ -150,7 +152,7 @@ html {
   margin: 1rem;
 }
 
-.nextcard-btn {
+.card-btn {
   padding: 1rem 3rem;
   display: inline-block;
 
@@ -167,12 +169,12 @@ html {
   cursor: pointer;
 }
 
-.nextcard-btn:hover {
+.card-btn:hover {
   color: white;
   box-shadow: 4px 4px 15px rgb(250, 93, 101);
 }
 
-.nextcard-btn-container {
+.card-btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -181,4 +183,459 @@ html {
 .game-text {
   font-size: large;
   color: white;
+}
+
+
+@media (max-width: 576px) {
+
+.blackjack-game-area {
+  padding: 0;
+  flex-direction: column;
+}
+
+.pot-area {
+  flex-direction: row;
+  height: 15%;
+  margin: 0;
+  width: 99%;
+  font-size: small;
+}
+
+
+.blackjack-game-area .right-side .upper .display, .display, .navbar-items{
+  display: none;
+  margin: 0;
+}
+
+.display  > div > p {
+  margin: 0;
+}
+
+.right-side .game-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+
+.game-text p {
+  margin: 0;
+}
+
+.right-side {
+  flex-direction: row;
+  height: 15%;
+  width: 99%;
+  justify-content: space-around;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.game-button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.left-side {
+  height: 70%;
+  flex-direction: column;
+}
+
+.left-side .ai-area {
+  height: 10rem;
+  width: 25rem;
+  align-items: center;
+  gap: .3rem;
+}
+
+
+.left-side-down {
+  height: 23rem;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.player-area {
+  position: absolute;
+  left: 1rem;
+  height: 48%;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: .1rem;
+  
+}
+
+.card-btn-container {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  height: 20rem;
+  width: 5rem;
+  align-items: center;
+}
+
+.card-button {
+  height: 5rem;
+  width: 3rem;
+}
+
+.card-btn {
+  width: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-small;
+}
+
+.card-button .card .content, .symbols, h2 {
+  display: none;
+}
+
+.card-button .card .signal {
+  font-size: 2rem;
+}
+
+}
+
+/* @media (min-width: 577px) and ( max-width: 768px ) { 
+
+.blackjack-game-area {
+  flex-direction: column;
+}
+.card-btn-container {
+  gap: 0.5rem;
+}
+
+.card-btn-container .card-btn {
+  height: 5vh;
+  font-size: large;
+  display: flex;
+  align-items: center;
+}
+
+.right-side {
+  flex-direction: row;
+  order: 1;
+  margin: .5rem;
+}
+
+.right-side .display {
+width: 20%;
+}
+
+.right-side .upper {
+  flex-direction: row-reverse;
+}
+
+.right-side .game-text p{
+  text-align: center;
+}
+
+.right-side .navbar-items {
+  display: none;
+}
+
+.right-side .upper .display {
+  display: none;
+}
+
+.right-side .display div p {
+  font-size: large;
+}
+
+.right-side .display, .game-text, .btn p {
+  margin: 0;
+}
+
+.left-side {
+  order: 2;
+}
+
+.pot-area {
+  flex-direction: row;
+  width: 95vw;
+  order: 3;
+}
+} */
+@media (min-width: 577px) and ( max-width: 768px ) { 
+
+  .blackjack-game-area {
+    flex-direction: column;
+  }
+  .card-btn-container {
+    gap: 0.5rem;
+  }
+  
+  .card-btn-container .card-btn {
+    height: 5vh;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  
+  .right-side {
+    flex-direction: row;
+    order: 1;
+    margin: .5rem;
+  }
+  
+  .right-side .display {
+  width: 20%;
+  }
+  
+  .right-side .upper {
+    flex-direction: row-reverse;
+  }
+  
+  .right-side .game-text p{
+    text-align: center;
+  }
+  
+  .right-side .navbar-items {
+    display: none;
+  }
+  
+  .right-side .upper .display {
+    display: none;
+  }
+  
+  .right-side .display div p {
+    font-size: large;
+  }
+  
+  .right-side .display, .game-text, .btn p {
+    margin: 0;
+  }
+  
+  .left-side {
+    order: 2;
+  }
+  
+  .pot-area {
+    flex-direction: row;
+    width: 95vw;
+    order: 3;
+  }
+  
+  
+  
+}
+
+ @media (min-width: 769px) and ( max-width: 992px ) { 
+
+  .blackjack-game-area {
+    flex-direction: column;
+  }
+  .card-btn-container {
+    gap: 0.5rem;
+  }
+  
+  .card-btn-container .card-btn {
+    height: 5vh;
+    font-size: large;
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-side {
+    flex-direction: row;
+    order: 1;
+    margin: .5rem;
+  }
+  
+  .right-side .display {
+  width: 20%;
+  }
+  
+  .right-side .upper {
+    flex-direction: row-reverse;
+  }
+  
+  .right-side .game-text p{
+    text-align: center;
+  }
+  
+  .right-side .navbar-items {
+    display: none;
+  }
+  
+  .right-side .upper .display {
+    display: none;
+  }
+  
+  .right-side .display div p {
+    font-size: large;
+  }
+  
+  .right-side .display, .game-text, .btn p {
+    margin: 0;
+  }
+  
+  .left-side {
+    order: 2;
+  }
+  
+  .pot-area {
+    flex-direction: row;
+    width: 95vw;
+    order: 3;
+  }
+  
+  
+  
+}
+
+@media (min-width: 993px) and ( max-width: 1200px ) { 
+
+  .blackjack-game-area {
+    flex-direction: column;
+  }
+  .card-btn-container {
+    gap: 0.5rem;
+  }
+  
+  .card-btn-container .card-btn {
+    height: 5vh;
+    font-size: large;
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-side {
+    flex-direction: row;
+    order: 1;
+    margin: .5rem;
+  }
+  
+  .right-side .display {
+  width: 20%;
+  }
+  
+  .right-side .upper {
+    flex-direction: row-reverse;
+  }
+  
+  .right-side .game-text p{
+    text-align: center;
+  }
+  
+  .right-side .navbar-items {
+   flex-direction: column;
+   text-align: center;
+  }
+  
+  .right-side .upper .display {
+    display: none;
+  }
+  
+  .right-side .display div p {
+    font-size: large;
+  }
+  
+  .right-side .display, .game-text, .btn p {
+    margin: 0;
+  }
+  
+  .left-side {
+    order: 2;
+  }
+  
+  .pot-area {
+    flex-direction: row;
+    width: 95vw;
+    order: 3;
+  }
+  
+  
+  
+}
+
+@media (min-width: 1201px) and ( max-width: 1400px ) { 
+
+  .blackjack-game-area {
+    flex-direction: column;
+  }
+  .card-btn-container {
+    gap: 0.5rem;
+  }
+  
+  .card-btn-container .card-btn {
+    height: 5vh;
+    font-size: large;
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-side {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    margin: .5rem;
+    justify-content: space-evenly;
+  }
+  
+  .right-side .display {
+    width: 20%;
+    
+  }
+  
+  .right-side .upper {
+    width: 55%;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  .right-side .upper .display {
+    /* width: ; */
+  }
+  
+  .right-side .game-text p{
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .right-side .upper .navbar {
+    order: 1;
+  }
+  
+  .right-side .navbar-items {
+   flex-direction: column;
+   text-align: center;
+  }
+  
+  .right-side .upper .display {
+    /* display: none; */
+  }
+  
+  .right-side .display div p {
+    font-size: large;
+  }
+  
+  .right-side .display, .game-text, .btn p {
+    margin: 0;
+  }
+  
+  .left-side {
+    order: 2;
+  }
+  
+  .pot-area {
+    flex-direction: row;
+    width: 95vw;
+    order: 3;
+  }
+  
+  
+  
 }
