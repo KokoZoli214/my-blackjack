@@ -1,5 +1,6 @@
 import React from "react";
 import "../about/about.css";
+import "../media-query/media-query-about.css"
 
 export default function About() {
   return (

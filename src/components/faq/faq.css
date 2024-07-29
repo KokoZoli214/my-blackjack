@@ -3,11 +3,11 @@ body {
 }
 
 .faq-container {
-    width: 100%;
+    width: 95%;
     height: 90vh;
 
     margin: 0;
-    padding: 1.5rem;
+    padding: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -30,9 +30,10 @@ body {
     font-size: x-large;
     text-shadow: 2px 2px 4px rgb(8, 150, 8);
 
+    margin-top: 2.5rem;
     padding: 1rem;
 
-    width: 1200px;
+    width: 100%;
 
     line-height: 2rem;
     word-spacing: 5px;

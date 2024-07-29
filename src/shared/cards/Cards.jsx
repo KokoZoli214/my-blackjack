@@ -10,7 +10,7 @@ export default function Cards({ card }) {
     <button className="card-button">
       <article className="card">
         <header>
-          <h2>{card.card} </h2>
+          <h2 className="card-name">{card.card} </h2>
         </header>
         <div className="symbols"> {card.symbols} </div>
         <div className="signal"> {card.signal} </div>

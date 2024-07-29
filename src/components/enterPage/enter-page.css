@@ -1,3 +1,4 @@
+@import url(../media-query/media-query-enter-page.css);
 .enter {
   display: flex;
   flex-direction: column;

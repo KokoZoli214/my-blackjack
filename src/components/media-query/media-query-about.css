@@ -1,0 +1,43 @@
+@media (max-width: 375px) { 
+    .about-content {
+        font-size: medium;
+        height: 60%;
+        overflow-y: auto;
+    }
+ }
+
+@media (min-width: 577px) and (max-width: 768px) { 
+    .about-content {
+        font-size: medium;
+        height: 60%;
+        overflow-y: auto;
+        width: 85%;
+    }
+ }
+    
+@media (min-width: 769px) and ( max-width: 992px ) {
+    .about-content {
+        font-size: large;
+        height: 60%;
+        overflow-y: auto;
+        width: 85%;
+    }
+ }
+    
+@media (min-width: 993px) and ( max-width: 1200px) { 
+    .about-content {
+        font-size: large;
+        height: auto;
+        /* overflow-y: auto; */
+        width: 95%;
+    }
+ } 
+    
+@media (min-width: 1201px) and ( max-width: 1400px) {
+    .about-content {
+        font-size: large;
+        height: auto;
+        /* overflow-y: auto; */
+        width: 95%;
+    }
+ }

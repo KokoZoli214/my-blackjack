@@ -1,5 +1,6 @@
 import React from "react";
 import "../faq/faq.css";
+import "../media-query/media-query-faq.css"
 
 export default function Faq() {
   return (

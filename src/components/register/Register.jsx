@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { auth } from "../../firebase";
 import "../register/register.css";
+import "../media-query/media-query-register.css"
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
   const [gender, setGender] = useState("");
 
 console.log("auth test")
@@ -53,16 +53,6 @@ console.log("auth test")
               required 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              />
-            </article>
-
-            <article className="inputs">
-              <input
-              type="text"
-              placeholder="Name"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
               />
             </article>
 

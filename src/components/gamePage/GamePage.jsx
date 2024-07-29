@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../navBar/NavBar";
 import Cards from "../../shared/cards/Cards";
 import SelectCardFunction from "../select-card-function/SelectCardFunction";
+import {calculateHandValue} from "../functions/calculateHandValue.js"
+
 import "../gamePage/gamepage.css";
 import "../gameButton/gamebutton.css";
+import "../media-query/media-query-game-page.css"
 
 export default function GamePage() {
   const [playerScore, setPlayerScore] = useState(0);
@@ -25,19 +28,6 @@ export default function GamePage() {
     SelectCardFunction(),
     SelectCardFunction(),
   ]);
-  // const maxPlayerCards = 5;
-
-  const calculateHandValue = (cards) => {
-    let totalValue = cards.reduce((total, card) => total + card.value, 0);
-    let aceCount = cards.filter((card) => card.card === "Ace").length;
-
-    while (aceCount > 0 && totalValue + 10 <= 21) {
-      totalValue += 10;
-      aceCount--;
-    }
-
-    return totalValue;
-  };
 
   const totalCardValue = calculateHandValue(playerCards);
   const totalAiCardValue = calculateHandValue(aiCards);
@@ -51,19 +41,19 @@ export default function GamePage() {
   }, [aiCash, playerCash, potValue]);
 
   const drawCard = () => {
-    if (!endGame && potValue > 0) {
-      const nextCard = SelectCardFunction();
-      setPlayerCards([...playerCards, nextCard]);
-      if (
-        playerCards.length === playerCards ||
-        totalCardValue + nextCard.value >= 21
-      ) {
-        setEndGame(true);
-        setRoundEnded(true);
-        determineWinner(totalCardValue + nextCard.value, totalAiCardValue);
-      }
-    }
-  };
+     if (!endGame && potValue > 0) {
+       const nextCard = SelectCardFunction();
+       setPlayerCards([...playerCards, nextCard]);
+       if (
+         playerCards.length === playerCards ||
+         totalCardValue + nextCard.value >= 21
+       ) {
+         setEndGame(true);
+         setRoundEnded(true);
+         determineWinner(totalCardValue + nextCard.value, totalAiCardValue);
+       }
+     }
+   };
 
   const endRound = () => {
     setEndGame(true);
