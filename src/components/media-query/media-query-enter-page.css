@@ -10,6 +10,18 @@
     }
 }
 
+@media (min-width: 376px) and (max-width: 576px) {
+  .enter-button {
+    padding: 1rem 2rem;
+    font-size: medium;
+  }
+
+  .check-text {
+    text-align: center;
+    font-size: small;
+}
+}
+
 @media (min-width: 577px) and (max-width: 768px) { 
     .enter-button {
         padding: 1rem 2rem;

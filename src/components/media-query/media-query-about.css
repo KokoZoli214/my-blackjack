@@ -1,15 +1,23 @@
 @media (max-width: 375px) { 
     .about-content {
         font-size: medium;
-        height: 60%;
+        height: 70%;
         overflow-y: auto;
     }
  }
 
+@media (min-width: 376px) and (max-width: 576px) {
+    .about-content {
+        font-size: medium;
+        height: 70%;
+        overflow-y: auto;
+    }
+} 
+
 @media (min-width: 577px) and (max-width: 768px) { 
     .about-content {
         font-size: medium;
-        height: 60%;
+        height: 70%;
         overflow-y: auto;
         width: 85%;
     }
@@ -18,7 +26,7 @@
 @media (min-width: 769px) and ( max-width: 992px ) {
     .about-content {
         font-size: large;
-        height: 60%;
+        height: 70%;
         overflow-y: auto;
         width: 85%;
     }

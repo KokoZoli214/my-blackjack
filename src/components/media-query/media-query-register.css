@@ -1,9 +1,53 @@
-@media (max-width: 375px) { }
+@media (max-width: 375px) { 
+    .register-container {
+        height: 450px;
+        width: 250px;
+    }
 
-@media (min-width: 577px) and (max-width: 768px) { }
+    .reg-header {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 576px) {
+    .register-container {
+        height: 470px;
+        width: 270px;
+    }
+
+    .reg-header {
+        font-size: 2.5rem;
+    }
+ }
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .register-container {
+        height: 500px;
+        width: 300px;
+    }
+
+    .reg-header {
+        font-size: 3rem;
+    }
+ }
     
-@media (min-width: 769px) and ( max-width: 992px ) { }
+@media (min-width: 769px) and ( max-width: 992px ) {
+       .register-container {
+        height: 500px;
+        width: 300px;
+    }
+ }
     
-@media (min-width: 993px) and ( max-width: 1200px) { } 
+@media (min-width: 993px) and ( max-width: 1200px) {
+       .register-container {
+        height: 500px;
+        width: 300px;
+    }
+ } 
     
-@media (min-width: 1201px) and ( max-width: 1400px) { }
+@media (min-width: 1201px) and ( max-width: 1400px) {
+       .register-container {
+        height: 500px;
+        width: 300px;
+    }
+ }
